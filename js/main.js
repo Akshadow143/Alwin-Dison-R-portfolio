@@ -1,38 +1,79 @@
-// Boot animation
-window.addEventListener("load", () => {
-    document.body.style.opacity = "0";
+const bootText = document.getElementById("boot-text");
 
-    setTimeout(() => {
-        document.body.style.transition = "opacity 1.2s ease";
-        document.body.style.opacity = "1";
-    }, 200);
-});
+const portfolio = document.getElementById("portfolio");
 
-// Random glitch pulse
-const glitch = document.querySelector(".glitch");
+const bootScreen = document.getElementById("boot-screen");
 
-setInterval(() => {
-    glitch.classList.add("active");
+const lines = [
 
-    setTimeout(() => {
-        glitch.classList.remove("active");
-    }, 180);
+"> Initializing Digital Archive...",
 
-}, 4000);
+"> Loading Projects...",
 
-// Neon button ripple
-document.querySelectorAll(".btn").forEach(button => {
+"> Loading Skills...",
 
-    button.addEventListener("mouseenter", () => {
+"> Connecting to VIDLYRA...",
 
-        button.style.transform = "scale(1.05)";
+"> Authentication Successful",
 
-    });
+"> ACCESS GRANTED"
 
-    button.addEventListener("mouseleave", () => {
+];
 
-        button.style.transform = "scale(1)";
+let line = 0;
 
-    });
+let char = 0;
 
-});
+function type(){
+
+    if(line < lines.length){
+
+        if(char < lines[line].length){
+
+            bootText.textContent += lines[line].charAt(char);
+
+            char++;
+
+            setTimeout(type,30);
+
+        }
+
+        else{
+
+            bootText.textContent += "\n";
+
+            line++;
+
+            char=0;
+
+            setTimeout(type,300);
+
+        }
+
+    }
+
+    else{
+
+        setTimeout(()=>{
+
+            bootScreen.style.display="none";
+
+            portfolio.style.display="block";
+
+            document.body.style.opacity="0";
+
+            setTimeout(()=>{
+
+                document.body.style.transition="opacity 1s";
+
+                document.body.style.opacity="1";
+
+            },50);
+
+        },800);
+
+    }
+
+}
+
+type();
