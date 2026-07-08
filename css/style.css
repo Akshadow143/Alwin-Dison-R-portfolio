@@ -63,7 +63,7 @@ body::before{
 
     z-index:2;
 
-    padding:20px;
+    padding-top:140px;
 
 }
 
@@ -332,5 +332,77 @@ body{
     box-shadow:
         0 0 18px #7A00FF,
         0 0 36px #7A00FF;
+
+}
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(5,5,5,.6);
+
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    font-size:1.4rem;
+
+    color:#00E5FF;
+
+    font-weight:bold;
+
+}
+
+.logo span{
+
+    color:#7A00FF;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#00E5FF;
+
+    text-shadow:0 0 12px #00E5FF;
 
 }
