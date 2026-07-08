@@ -242,3 +242,46 @@ h1{
 }
 
 }
+/* =========================
+BOOT SCREEN
+========================= */
+
+#boot-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#000;
+
+    color:#00ff99;
+
+    font-family:"JetBrains Mono",monospace;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:40px;
+
+    z-index:9999;
+
+}
+
+#boot-text{
+
+    white-space:pre-wrap;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+#portfolio{
+
+    display:none;
+
+}
