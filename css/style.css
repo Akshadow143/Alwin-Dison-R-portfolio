@@ -285,3 +285,52 @@ BOOT SCREEN
     display:none;
 
 }
+/* =========================
+   CUSTOM CURSOR
+========================= */
+
+body{
+    cursor:none;
+}
+
+.cursor{
+
+    width:18px;
+    height:18px;
+
+    border:2px solid #00E5FF;
+
+    border-radius:50%;
+
+    position:fixed;
+
+    transform:translate(-50%,-50%);
+
+    pointer-events:none;
+
+    z-index:99999;
+
+    transition:
+        width .2s,
+        height .2s,
+        border-color .2s,
+        box-shadow .2s;
+
+    box-shadow:
+        0 0 12px #00E5FF,
+        0 0 24px #00E5FF;
+
+}
+
+.cursor-hover{
+
+    width:36px;
+    height:36px;
+
+    border-color:#7A00FF;
+
+    box-shadow:
+        0 0 18px #7A00FF,
+        0 0 36px #7A00FF;
+
+}
