@@ -6,10 +6,10 @@
 }
 
 .profile-frame img{
-    width:80px !important;
-    height:auto !important;
-    display:block;
-    margin:auto;
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
 }
 /* ===================================
    ANIMATION
