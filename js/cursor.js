@@ -1,18 +1,32 @@
+// ===============================
+// Custom Cursor
+// ===============================
+
 const cursor = document.createElement("div");
-cursor.classList.add("cursor");
+
+cursor.className = "cursor";
+
 document.body.appendChild(cursor);
 
 document.addEventListener("mousemove", (e) => {
+
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
+
 });
 
-document.querySelectorAll("a, button").forEach((el) => {
-    el.addEventListener("mouseenter", () => {
+document.querySelectorAll("a, button").forEach((item) => {
+
+    item.addEventListener("mouseenter", () => {
+
         cursor.classList.add("cursor-hover");
+
     });
 
-    el.addEventListener("mouseleave", () => {
+    item.addEventListener("mouseleave", () => {
+
         cursor.classList.remove("cursor-hover");
+
     });
+
 });
