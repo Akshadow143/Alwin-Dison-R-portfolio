@@ -1,0 +1,222 @@
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+/* Large Tablets */
+@media (max-width:1024px){
+
+    .hero{
+
+        flex-direction:column-reverse;
+        text-align:center;
+        gap:50px;
+
+    }
+
+    .hero-left{
+
+        width:100%;
+
+    }
+
+    .description{
+
+        margin:25px auto 0;
+        max-width:700px;
+
+    }
+
+    .buttons{
+
+        justify-content:center;
+
+    }
+
+    .profile-frame{
+
+        width:300px;
+        height:300px;
+
+    }
+
+    .nav-links{
+
+        gap:20px;
+
+    }
+
+}
+
+/* Tablets */
+
+@media (max-width:768px){
+
+    section{
+
+        padding:90px 7%;
+
+    }
+
+    .navbar{
+
+        padding:15px 5%;
+        flex-direction:column;
+        gap:15px;
+
+    }
+
+    .logo{
+
+        font-size:1.4rem;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+
+    }
+
+    .glitch{
+
+        font-size:2.4rem;
+        text-align:center;
+
+    }
+
+    .typing{
+
+        font-size:1.2rem;
+
+    }
+
+    .subtitle{
+
+        font-size:1rem;
+
+    }
+
+    .description{
+
+        font-size:.95rem;
+
+    }
+
+    .profile-frame{
+
+        width:250px;
+        height:250px;
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+        align-items:center;
+
+    }
+
+    .btn{
+
+        width:220px;
+        text-align:center;
+
+    }
+
+    .section-title h2{
+
+        font-size:2.2rem;
+
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+    .navbar{
+
+        padding:12px 5%;
+
+    }
+
+    .logo{
+
+        font-size:1.2rem;
+
+    }
+
+    .nav-links{
+
+        gap:10px;
+
+    }
+
+    .nav-links a{
+
+        font-size:.9rem;
+
+    }
+
+    .hero{
+
+        padding-top:140px;
+
+    }
+
+    .glitch{
+
+        font-size:1.9rem;
+        letter-spacing:2px;
+
+    }
+
+    .typing{
+
+        font-size:1rem;
+
+    }
+
+    .status{
+
+        font-size:.8rem;
+
+    }
+
+    .subtitle{
+
+        font-size:.9rem;
+
+    }
+
+    .description{
+
+        font-size:.9rem;
+        line-height:1.7;
+
+    }
+
+    .profile-frame{
+
+        width:200px;
+        height:200px;
+
+    }
+
+    .btn{
+
+        width:100%;
+        max-width:260px;
+
+    }
+
+    .section-title h2{
+
+        font-size:1.8rem;
+
+    }
+
+}
