@@ -7,35 +7,19 @@
 ========================== */
 
 .profile-frame{
+    width:250px;
+    height:250px;
+    overflow:hidden;
 
     display:flex;
     justify-content:center;
     align-items:center;
-
-    animation:floatImage 4s ease-in-out infinite;
 }
 
 .profile-frame img{
-
-    width:180px;   /* Change this value */
-    max-width:100%;
-
+    width:140px;
     height:auto;
-
     object-fit:contain;
-
-    filter:
-        drop-shadow(0 0 15px #00E5FF)
-        drop-shadow(0 0 35px #7A00FF);
-
-    transition:0.3s;
-
-}
-
-.profile-frame img:hover{
-
-    transform:scale(1.05);
-
 }
 
 /* ===================================
