@@ -1,3 +1,7 @@
+// ===============================
+// Matrix Rain Background
+// ===============================
+
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -8,16 +12,17 @@ canvas.style.top = "0";
 canvas.style.left = "0";
 canvas.style.width = "100%";
 canvas.style.height = "100%";
-canvas.style.zIndex = "-1";
-canvas.style.opacity = "0.25";
+canvas.style.zIndex = "-5";
+canvas.style.opacity = "0.15";
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const letters =
-"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&<>[]{}";
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&";
 
 const fontSize = 16;
+
 const columns = Math.floor(canvas.width / fontSize);
 
 const drops = Array(columns).fill(1);
@@ -28,6 +33,7 @@ function draw() {
     ctx.fillRect(0,0,canvas.width,canvas.height);
 
     ctx.fillStyle = "#00E5FF";
+
     ctx.font = fontSize + "px monospace";
 
     for(let i=0;i<drops.length;i++){
@@ -36,7 +42,7 @@ function draw() {
 
         ctx.fillText(text,i*fontSize,drops[i]*fontSize);
 
-        if(drops[i]*fontSize>canvas.height && Math.random()>0.975){
+        if(drops[i]*fontSize>canvas.height && Math.random()>0.98){
 
             drops[i]=0;
 
