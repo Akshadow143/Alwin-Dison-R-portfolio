@@ -1,79 +1,78 @@
-const bootText = document.getElementById("boot-text");
+// ===============================
+// Boot Screen
+// ===============================
 
+const bootText = document.getElementById("boot-text");
+const bootScreen = document.getElementById("boot-screen");
 const portfolio = document.getElementById("portfolio");
 
-const bootScreen = document.getElementById("boot-screen");
-
 const lines = [
-
-"> Initializing Digital Archive...",
-
-"> Loading Projects...",
-
-"> Loading Skills...",
-
-"> Connecting to VIDLYRA...",
-
-"> Authentication Successful",
-
-"> ACCESS GRANTED"
-
+  "> Initializing Digital Archive...",
+  "> Loading Portfolio...",
+  "> Loading Projects...",
+  "> Connecting to VIDLYRA...",
+  "> Authentication Successful",
+  "> ACCESS GRANTED"
 ];
 
 let line = 0;
+let character = 0;
 
-let char = 0;
+function typeWriter() {
 
-function type(){
+  if (line < lines.length) {
 
-    if(line < lines.length){
+    if (character < lines[line].length) {
 
-        if(char < lines[line].length){
+      bootText.textContent += lines[line].charAt(character);
 
-            bootText.textContent += lines[line].charAt(char);
+      character++;
 
-            char++;
+      setTimeout(typeWriter, 30);
 
-            setTimeout(type,30);
+    } else {
 
-        }
+      bootText.textContent += "\n";
 
-        else{
+      line++;
+      character = 0;
 
-            bootText.textContent += "\n";
-
-            line++;
-
-            char=0;
-
-            setTimeout(type,300);
-
-        }
+      setTimeout(typeWriter, 300);
 
     }
 
-    else{
+  } else {
 
-        setTimeout(()=>{
+    setTimeout(() => {
 
-            bootScreen.style.display="none";
+      bootScreen.style.display = "none";
+      portfolio.style.display = "block";
 
-            portfolio.style.display="block";
+    }, 800);
 
-            document.body.style.opacity="0";
-
-            setTimeout(()=>{
-
-                document.body.style.transition="opacity 1s";
-
-                document.body.style.opacity="1";
-
-            },50);
-
-        },800);
-
-    }
+  }
 
 }
 
-type();
+window.onload = typeWriter;
+
+
+// ===============================
+// Random Glitch Animation
+// ===============================
+
+const glitch = document.querySelector(".glitch");
+
+setInterval(() => {
+
+  if (!glitch) return;
+
+  glitch.classList.add("active");
+
+  setTimeout(() => {
+
+    glitch.classList.remove("active");
+
+  }, 200);
+
+}, 5000);
