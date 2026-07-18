@@ -220,3 +220,18 @@
     }
 
 }
+@media (max-width:768px){
+
+    .profile-frame img{
+        width:180px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .profile-frame img{
+        width:150px;
+    }
+
+}
