@@ -195,11 +195,13 @@
 
     }
 
-    .typing{
+    @media (max-width:480px){
 
-        font-size:1rem;
-
+    .typing-text{
+        font-size:0.9rem;
     }
+
+}
 
     .status{
 
